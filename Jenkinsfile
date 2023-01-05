@@ -11,7 +11,7 @@ pipeline {
 					$class: 'GitSCM',
 					clearWorkspace: true,
 					branches: [
-						[name: "*/${env.GIT_BRANCH_NAME ?: 'main'}"]
+						[name: "*/${env.GIT_BRANCH_NAME ?: 'master'}"]
 					],
 					extensions: [
 						[$class: 'WipeWorkspace'],
