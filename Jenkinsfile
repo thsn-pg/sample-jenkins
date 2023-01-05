@@ -18,7 +18,7 @@ pipeline {
 					],
 					userRemoteConfigs: [
 						[credentialsId: Boolean.parseBoolean(env.GIT_USE_SSH_KEY) == Boolean.TRUE ?
-							env.GIT_SSH_CREDENTIAL_ID : env.GIT_CREDENTIAL_ID, url: "/opt/sample-project"]
+							env.GIT_SSH_CREDENTIAL_ID : env.GIT_CREDENTIAL_ID, url: env.GIT_REPOSITORY]
 					]
 				])
 
